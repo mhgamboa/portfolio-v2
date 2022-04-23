@@ -1,3 +1,5 @@
+I used [this guide](https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js) to set up the project (only Nextjs, TS, and ESlint)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
