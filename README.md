@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Initialized with [this](https://www.sandromaglione.com/create-nextjs-project-with-typescript-eslint-prettier-tailwindcss/) guide
+
 ## Getting Started
 
 First, run the development server:
