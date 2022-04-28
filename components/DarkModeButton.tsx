@@ -15,11 +15,9 @@ function DarkModeButton({ toggleDark, dark }: props) {
     >
       <div
         id="switch-toggle"
-        className={`w-6 h-6 md:w-7 md:h-7 relative rounded-full transition duration-500 transform p-1 text-white ${
-          dark ? "bg-gray-700 translate-x-full" : "bg-yellow-500 -translate-x-2"
-        }`}
+        className="w-6 h-6 md:w-7 md:h-7 relative rounded-full transition duration-500 transform p-1 text-white bg-yellow-500 -translate-x-2 dark:bg-gray-700 dark:translate-x-full"
       >
-        {dark ? (
+        {dark === "dark" ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
