@@ -8,8 +8,6 @@ interface props {
 function DarkModeButton({ toggleDark, dark }: props) {
   return (
     <button
-      data-aos="fade-left"
-      data-aos-mirror="false"
       className="absolute top-5 right-5 w-10 h-5 md:w-12 md:h-6 rounded-2xl bg-white flex items-center transition duration-300 focus:outline-none shadow"
       onClick={() => toggleDark((dark) => (dark === "dark" ? "" : "dark"))}
     >

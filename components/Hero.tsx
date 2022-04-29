@@ -1,5 +1,7 @@
 import React from "react";
 import DarkModeButton from "./DarkModeButton";
+import { SiLinkedin } from "react-icons/si";
+import { IconContext } from "react-icons";
 
 interface props {
   dark: string;
@@ -8,7 +10,7 @@ interface props {
 
 const Hero = ({ dark, toggleDark }: props) => {
   return (
-    <section className="h-screen w-full flex flex-col items-center dark:bg-gray-900 justify-center lg:items-start lg:pl-28">
+    <section className="h-screen w-full flex flex-col items-center dark:bg-gray-800 justify-center lg:items-start lg:pl-28">
       <DarkModeButton toggleDark={toggleDark} dark={dark} />
       <div className="flex flex-col">
         <h1 className="text-center lg:text-left font-medium dark:text-white mb-3">
@@ -28,6 +30,11 @@ const Hero = ({ dark, toggleDark }: props) => {
         </span>
       </a>
       <div className="flex justify-between mb-5 w-1/2 md:w-1/3 lg:w-1/3">
+        <IconContext.Provider value={{ size: "2rem" }}>
+          <a href="https://www.linkedin.com/in/marcus-gamboa/" target="_blank" rel="noreferrer">
+            <SiLinkedin />
+          </a>
+        </IconContext.Provider>
         {/* <a href="https://www.linkedin.com/in/marcus-gamboa/" target="_blank" rel="noreferrer">
           <LinkedinIcon
             className="h-10 lg:h-12 xl:h-14 2xl:h-20"
