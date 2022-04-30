@@ -2,8 +2,10 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Hero from "../components/Hero";
 import { useState } from "react";
+
+import Hero from "../components/Hero";
+import About from "../components/About";
 
 const Home: NextPage = () => {
   const [dark, toggleDark] = useState("");
@@ -16,7 +18,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={`flex flex-col overflow-hidden ${dark}`}>
-        <Hero dark={dark} toggleDark={toggleDark} />
+        <div className="dark:bg-gray-800 bg-slate-50">
+          <Hero dark={dark} toggleDark={toggleDark} />
+          <About />
+        </div>
       </main>
 
       <footer className={styles.footer}>
