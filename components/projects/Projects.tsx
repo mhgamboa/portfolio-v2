@@ -19,7 +19,6 @@ function Projects() {
               key={object.name}
               imageLink={object.imageLink}
               technologies={object.technologies}
-              isDark={isDark}
             />
           );
         })}

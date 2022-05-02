@@ -1,6 +1,6 @@
 import React from "react";
 // import portrait from "../public/portrait.jpg"; //TODO: Find the best folder to store images
-import Image from "next/image";
+// import Image from "next/image";
 
 function About() {
   return (
