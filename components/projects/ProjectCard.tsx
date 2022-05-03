@@ -12,13 +12,20 @@ import Image from "next/image";
 // import { ReactComponent as ExpressIcon } from "../../img/icons/express.svg";
 // import { ReactComponent as BootstrapIcon } from "../../img/icons/bootstrap.svg";
 
+type StaticImageData = {
+  src: string;
+  height: number;
+  width: number;
+  placeholder?: string;
+};
+
 interface props {
   name: string;
   description: string;
   url: string;
   githubLink: string;
-  technologies: string;
-  imageLink: StringImageProps;
+  technologies: string[];
+  imageLink: string | StaticImageData;
 }
 
 function ProjectCard({ name, description, url, githubLink, imageLink }: props) {
@@ -31,6 +38,8 @@ function ProjectCard({ name, description, url, githubLink, imageLink }: props) {
         <Image
           src={imageLink}
           alt={`${name} project`}
+          height={100}
+          width={100}
           className="w-full mb-3 h-36 object-cover"
         />
       </a>

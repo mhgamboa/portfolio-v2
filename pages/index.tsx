@@ -6,6 +6,7 @@ import { useState } from "react";
 
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Projects from "../components/projects/Projects";
 
 const Home: NextPage = () => {
   const [dark, toggleDark] = useState("");
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
         <div className="dark:bg-gray-800 bg-slate-50">
           <Hero dark={dark} toggleDark={toggleDark} />
           <About />
+          <Projects />
         </div>
       </main>
 
