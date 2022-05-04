@@ -31,17 +31,18 @@ interface props {
 function ProjectCard({ name, description, url, githubLink, imageLink }: props) {
   return (
     <div
-      className={`flex flex-col justify-between pb-5 rounded-md overflow-hidden bg-white dark:bg-black dark:white-shadow shadow-md`}
+      className={`flex flex-col justify-between pb-5 rounded-md overflow-hidden bg-white dark:bg-gray-900 dark:white-shadow shadow-md`}
       data-aos="fade-down"
     >
       <a href={url} target="_blank" rel="noreferrer">
-        <Image
-          src={imageLink}
-          alt={`${name} project`}
-          height={100}
-          width={100}
-          className="w-full mb-3 h-36 object-cover"
-        />
+        <div className="relative w-full h-40">
+          <Image
+            src={imageLink}
+            alt={`${name} project`}
+            layout="fill"
+            className="w-full mb-3 h-36 object-cover"
+          />
+        </div>
       </a>
 
       <h2 className="h2 text-center mb-8">{name}</h2>
