@@ -1,6 +1,19 @@
 import React from "react";
 import Image from "next/image";
 
+import {
+  SiReact,
+  SiJavascript,
+  SiHtml5,
+  SiTailwindcss,
+  SiCss3,
+  SiD3Dotjs,
+  SiMongodb,
+  SiNodedotjs,
+  SiExpress,
+  SiBootstrap,
+} from "react-icons/si";
+
 // import { ReactComponent as ReactIcon } from "../../img/icons/react.svg";
 // import { ReactComponent as JSIcon } from "../../img/icons/javascript.svg";
 // import { ReactComponent as HTMLIcon } from "../../img/icons/html5.svg";
