@@ -2,28 +2,17 @@ import React from "react";
 import Image from "next/image";
 
 import {
-  SiReact,
-  SiJavascript,
-  SiHtml5,
-  SiTailwindcss,
-  SiCss3,
-  SiD3Dotjs,
   SiMongodb,
-  SiNodedotjs,
   SiExpress,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiNodedotjs,
+  SiTailwindcss,
+  SiD3Dotjs,
   SiBootstrap,
 } from "react-icons/si";
-
-// import { ReactComponent as ReactIcon } from "../../img/icons/react.svg";
-// import { ReactComponent as JSIcon } from "../../img/icons/javascript.svg";
-// import { ReactComponent as HTMLIcon } from "../../img/icons/html5.svg";
-// import { ReactComponent as CSSIcon } from "../../img/icons/css.svg";
-// import { ReactComponent as TailwindIcon } from "../../img/icons/tailwindcss.svg";
-// import { ReactComponent as D3Icon } from "../../img/icons/d3.svg";
-// import { ReactComponent as MongoDBIcon } from "../../img/icons/mongodb.svg";
-// import { ReactComponent as NodeIcon } from "../../img/icons/node.svg";
-// import { ReactComponent as ExpressIcon } from "../../img/icons/express.svg";
-// import { ReactComponent as BootstrapIcon } from "../../img/icons/bootstrap.svg";
 
 type StaticImageData = {
   src: string;
@@ -41,7 +30,9 @@ interface props {
   imageLink: string | StaticImageData;
 }
 
-function ProjectCard({ name, description, url, githubLink, imageLink }: props) {
+function ProjectCard({ name, description, url, githubLink, technologies, imageLink }: props) {
+  const iconClass = "text-5xl md:text-6xl 2xl:text-7xl dark:text-zinc-300";
+
   return (
     <div
       className={`flex flex-col justify-between pb-5 rounded-md overflow-hidden bg-white dark:bg-gray-900 dark:white-shadow shadow-md`}
@@ -61,36 +52,16 @@ function ProjectCard({ name, description, url, githubLink, imageLink }: props) {
       <h2 className="h2 text-center mb-8">{name}</h2>
       {/* Render Icons for technologies */}
       <div className="flex justify-around mb-5 lg:mt-2">
-        {/* {technologies.includes("mongodb") && (
-          <MongoDBIcon className="h-10 xl:h-12 2xl:h-14" fill={isDark ? "white" : ""} />
-        )}
-        {technologies.includes("express") && (
-          <ExpressIcon className="h-10 xl:h-12 2xl:h-14" fill={isDark ? "white" : ""} />
-        )}
-        {technologies.includes("html") && (
-          <HTMLIcon className="h-10 xl:h-12 2xl:h-14" fill={isDark ? "white" : ""} />
-        )}
-        {technologies.includes("css") && (
-          <CSSIcon className="h-10 xl:h-12 2xl:h-14" fill={isDark ? "white" : ""} />
-        )}
-        {technologies.includes("javascript") && (
-          <JSIcon className="h-10 xl:h-12 2xl:h-14" fill={isDark ? "white" : ""} />
-        )}
-        {technologies.includes("react") && (
-          <ReactIcon className="h-10 xl:h-12 2xl:h-14" fill={isDark ? "white" : ""} />
-        )}
-        {technologies.includes("node") && (
-          <NodeIcon className="h-10 xl:h-12 2xl:h-14" fill={isDark ? "white" : ""} />
-        )}
-        {technologies.includes("tailwindcss") && (
-          <TailwindIcon className="h-10 xl:h-12 2xl:h-14" fill={isDark ? "white" : ""} />
-        )}
-        {technologies.includes("d3") && (
-          <D3Icon className="h-10 xl:h-12 2xl:h-14" fill={isDark ? "white" : ""} />
-        )}
-        {technologies.includes("bootstrap") && (
-          <BootstrapIcon className="h-10 xl:h-12 2xl:h-14" fill={isDark ? "white" : ""} />
-        )} */}
+        {technologies.includes("mongodb") && <SiMongodb className="iconClass" />}
+        {technologies.includes("express") && <SiExpress className="iconClass" />}
+        {technologies.includes("html") && <SiHtml5 className="iconClass" />}
+        {technologies.includes("css") && <SiCss3 className="iconClass" />}
+        {technologies.includes("javascript") && <SiJavascript className="iconClass" />}
+        {technologies.includes("react") && <SiReact className="iconClass" />}
+        {technologies.includes("node") && <SiNodedotjs className="iconClass" />}
+        {technologies.includes("tailwindcss") && <SiTailwindcss className="iconClass" />}
+        {technologies.includes("d3") && <SiD3Dotjs className="iconClass" />}
+        {technologies.includes("bootstrap") && <SiBootstrap className="iconClass" />}
       </div>
       <p className="text-center mb-5 md:mb-10 md:mt-6 mx-5 text-lg md:text-xl xl:text-2xl 2xl:text-3xl">
         {description}
